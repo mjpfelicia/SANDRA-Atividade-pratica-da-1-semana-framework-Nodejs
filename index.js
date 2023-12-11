@@ -4,17 +4,17 @@ const validaIdade = require('./verificaIdade')
 
 
 while (true){
-    var nome = prompt('Nome completo: ');
-    var rg = prompt('RG: ');
-    var cpf = prompt('CPF: ');
-    var nascimento = prompt('Nascimento: ');
+    const nome = prompt('Nome completo: ');
+    const rg = prompt('RG: ');
+    const cpf = prompt('CPF: ');
+    const nascimento = prompt('Nascimento: ');
 
     if(/*FAÇA AQUI A VERIFICAÇÃO DA IDADE UTILIZANDO O ARQUIVO QUE VOCÊ IMPORTOU*/
     validaIdade.eMaior(nascimento)
     ){
-        var eleitor = prompt('Título de eleitor: ');
+        const eleitor = prompt('Título de eleitor: ');
     }else{
-        var eleitor = undefined;
+        const eleitor = undefined;
     }
 
     console.log('Nome:', nome);
@@ -23,7 +23,7 @@ while (true){
     console.log('Data de Nascimento:', nascimento);
     eleitor !== undefined ? console.log('Eleitor: ', eleitor): console.log();
 
-    var confirm = prompt('Confirma?');
+    const confirm = prompt('Confirma?');
 
     if(confirm == 'S' || confirm == 's'){
         break;
