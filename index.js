@@ -1,5 +1,7 @@
 const prompt = require('prompt-sync')();
 /*IMPORTE AQUI O ARQUIVO verificaIdade.js*/
+const validaIdade = require('./verificaIdade')
+
 
 while (true){
     var nome = prompt('Nome completo: ');
@@ -7,7 +9,9 @@ while (true){
     var cpf = prompt('CPF: ');
     var nascimento = prompt('Nascimento: ');
 
-    if(/*FAÇA AQUI A VERIFICAÇÃO DA IDADE UTILIZANDO O ARQUIVO QUE VOCÊ IMPORTOU*/){
+    if(/*FAÇA AQUI A VERIFICAÇÃO DA IDADE UTILIZANDO O ARQUIVO QUE VOCÊ IMPORTOU*/
+    validaIdade.eMaior(nascimento)
+    ){
         var eleitor = prompt('Título de eleitor: ');
     }else{
         var eleitor = undefined;
@@ -24,7 +28,7 @@ while (true){
     if(confirm == 'S' || confirm == 's'){
         break;
     }else{
-        console.clear();
+        // console.clear();
     }
 
 }
